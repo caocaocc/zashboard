@@ -16,29 +16,29 @@ export const language = useStorage<LANG>(
     : LANG.EN_US,
 )
 export const isSiderbarCollapsed = useStorage('config/is-sidebar-collapsed', true)
-export const font = useStorage<FONTS>('config/font', FONTS.MI_SANS)
+export const font = useStorage<FONTS>('config/font', FONTS.SYSTEM_UI)
 export const autoUpgrade = useStorage('config/auto-upgrade', false)
 
 // proxies
-export const showGlobalProxy = useStorage('config/show-global-proxy', true)
+export const showGlobalProxy = useStorage('config/show-global-proxy', false)
 export const collapseGroupMap = useStorage<Record<string, boolean>>('config/collapse-group-map', {})
-export const twoColumnProxyGroup = useStorage('config/two-columns', true)
+export const twoColumnProxyGroup = useStorage('config/two-columns', false)
 export const speedtestUrl = useStorage<string>(
   'config/speedtest-url',
-  'http://www.gstatic.com/generate_204',
+  'https://www.gstatic.com/generate_204',
 )
 export const speedtestTimeout = useStorage<number>('config/speedtest-timeout', 5000)
 export const proxySortType = useStorage<PROXY_SORT_TYPE>(
   'config/proxy-sort-type',
-  PROXY_SORT_TYPE.DEFAULT,
+  PROXY_SORT_TYPE.LATENCY_ASC,
 )
 export const automaticDisconnection = useStorage('config/automatic-disconnection', true)
-export const twoColumnNodeForMobile = useStorage('config/two-column-for-mobile', true)
+export const twoColumnNodeForMobile = useStorage('config/two-column-for-mobile', false)
 export const truncateProxyName = useStorage('config/truncate-proxy-name', true)
 export const proxyPreviewType = useStorage('config/proxy-preview-type', PROXY_PREVIEW_TYPE.AUTO)
-export const hideUnavailableProxies = useStorage('config/hide-unavailable-proxies', false)
-export const lowLatency = useStorage('config/low-latency', 300)
-export const mediumLatency = useStorage('config/medium-latency', 800)
+export const hideUnavailableProxies = useStorage('config/hide-unavailable-proxies', true)
+export const lowLatency = useStorage('config/low-latency', 600)
+export const mediumLatency = useStorage('config/medium-latency', 1200)
 
 // connections
 export const useConnectionCard = useStorage('config/use-connecticon-card', false)

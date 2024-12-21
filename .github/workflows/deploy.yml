@@ -21,7 +21,7 @@ jobs:
         id: release
         uses: googleapis/release-please-action@v4
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
 
   build-and-deploy:
@@ -40,7 +40,7 @@ jobs:
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
   release-dist:
@@ -85,7 +85,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.PAT }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: build and publish ghcr.io docker image
         uses: docker/build-push-action@v6

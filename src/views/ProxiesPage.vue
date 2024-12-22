@@ -11,7 +11,7 @@
             v-for="name in filterContent(renderGroups, idx)"
             :is="Comp"
             :key="name"
-            :name="name"
+            :name="$t(name)"
           />
         </div>
       </div>
@@ -24,7 +24,7 @@
         v-for="name in renderGroups"
         :is="Comp"
         :key="name"
-        :name="name"
+        :name="$t(name)"
       />
     </div>
   </div>

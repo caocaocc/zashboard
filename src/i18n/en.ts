@@ -101,5 +101,4 @@ export default {
   DNSQuery: 'DNS Query',
   proxy: 'Proxy',
   china: 'China',
-  auto: 'Auto',
 }

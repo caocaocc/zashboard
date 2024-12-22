@@ -100,5 +100,4 @@ export default {
   DNSQuery: 'DNS 查询',
   proxy: '节点',
   china: '国内流量',
-  auto: '自动选择',
 }
